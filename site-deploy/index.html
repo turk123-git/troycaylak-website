@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troy Caylak, Actor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #2C1810;
+            --dark: #3D2314;
+            --card: #F0E6D3;
+            --border: #D4B896;
+            --white: #2C1810;
+            --gold: #C4622D;
+            --gold-light: #E8845A;
+            --red: #C4622D;
+            --accent: #C4622D;
+            --bg: #F5F0E8;
+            --bg-section: #EDE4D4;
+            --text: #2C1810;
+            --text-muted: #7A5C44;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(245,240,232,0.95), transparent);
+        }
+
+        .nav-logo {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.2em;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(60,30,15,0.65);
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 120px 20px 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 80% 80%, rgba(214,48,49,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75em;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .hero-name {
+            font-family: 'Lilita One', cursive;
+            font-size: clamp(4em, 14vw, 11em);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-name span { display: block; }
+
+        .hero-name .last {
+            -webkit-text-stroke: 2px var(--gold);
+            color: transparent;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 30px auto;
+        }
+
+        .hero-tagline {
+            font-size: clamp(0.9em, 2vw, 1.15em);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: rgba(60,30,15,0.65);
+            max-width: 500px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            padding: 14px 36px;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.8em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            padding: 14px 36px;
+            border: 1px solid rgba(60,30,15,0.35);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* DIVIDER */
+        .full-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.7em;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Lilita One', cursive;
+            font-size: clamp(2em, 5vw, 3.5em);
+            line-height: 1;
+            margin-bottom: 50px;
+        }
+
+        /* BIO */
+        .bio-section { border-top: 1px solid var(--border); }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .bio-text p {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: rgba(60,30,15,0.75);
+            margin-bottom: 20px;
+        }
+
+        .bio-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .stat-item {
+            border-left: 2px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        .stat-num {
+            font-family: 'Lilita One', cursive;
+            font-size: 2.5em;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: rgba(60,30,15,0.55);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* REELS */
+        .reels-section { border-top: 1px solid var(--border); }
+
+        .reels-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .reel-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .reel-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .reel-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            background: #000;
+        }
+
+        .reel-info {
+            padding: 24px;
+        }
+
+        .reel-type {
+            font-size: 0.7em;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .reel-title {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.4em;
+        }
+
+        .reel-desc {
+            font-size: 0.9em;
+            color: rgba(60,30,15,0.55);
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        /* SHOWS */
+        .shows-section { border-top: 1px solid var(--border); }
+
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .show-card {
+            background: var(--card);
+            padding: 32px 28px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .show-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .show-card:hover {
+            border-color: rgba(201,168,76,0.4);
+            transform: translateY(-2px);
+        }
+
+        .show-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .show-number {
+            font-family: 'Lilita One', cursive;
+            font-size: 0.7em;
+            color: rgba(201,168,76,0.3);
+            letter-spacing: 0.2em;
+            margin-bottom: 16px;
+        }
+
+        .network-logo-wrap {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .network-logo {
+            max-height: 32px;
+            max-width: 100px;
+            object-fit: contain;
+            filter: brightness(0);
+            opacity: 0.85;
+        }
+
+        .logo-netflix { filter: none; opacity: 1; max-height: 22px; }
+        .logo-hbo { max-height: 28px; }
+        .logo-fx { max-height: 30px; }
+        .logo-peacock { max-height: 28px; filter: none; opacity: 1; }
+        .logo-paramount { max-height: 30px; }
+        .logo-abc { max-height: 36px; }
+        .logo-nbc { max-height: 36px; }
+        .logo-cbs { max-height: 28px; }
+        .logo-amazon { max-height: 28px; }
+
+        .show-title {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.15em;
+            margin-bottom: 10px;
+            letter-spacing: 0.02em;
+        }
+
+        .show-desc {
+            font-size: 0.85em;
+            line-height: 1.7;
+            color: rgba(245,245,245,0.55);
+            margin-bottom: 16px;
+        }
+
+        .show-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border: 1px solid rgba(201,168,76,0.3);
+            color: var(--gold);
+            font-size: 0.65em;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .show-still {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            filter: brightness(0.92) contrast(1.05);
+            transition: filter 0.3s;
+        }
+
+        .show-card:hover .show-still {
+            filter: brightness(1) contrast(1.05);
+        }
+
+        /* HEADSHOTS GALLERY */
+        .headshots-section { border-top: 1px solid var(--border); }
+
+        .headshots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .headshot-card {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: default;
+        }
+
+        .headshot-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .headshot-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .headshot-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px 24px 24px;
+            background: linear-gradient(to top, rgba(44,24,16,0.90) 0%, transparent 100%);
+        }
+
+        .headshot-label {
+            font-family: 'Lilita One', cursive;
+            font-size: 1em;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .headshot-desc {
+            font-size: 0.78em;
+            color: rgba(60,30,15,0.65);
+            line-height: 1.5;
+        }
+
+        /* SOCIAL */
+        .social-section { border-top: 1px solid var(--border); }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .social-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 32px 24px;
+            text-decoration: none;
+            color: var(--white);
+            transition: border-color 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .social-platform {
+            font-size: 0.65em;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .social-handle {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.2em;
+        }
+
+        .social-desc {
+            font-size: 0.82em;
+            color: rgba(60,30,15,0.50);
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact-section { border-top: 1px solid var(--border); }
+
+        .contact-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-copy p {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: rgba(60,30,15,0.75);
+            margin-bottom: 32px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-link {
+            color: rgba(60,30,15,0.55);
+            text-decoration: none;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-link:hover { color: var(--gold); }
+
+        .contact-form { display: flex; flex-direction: column; gap: 20px; }
+
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+
+        label {
+            font-size: 0.7em;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(60,30,15,0.55);
+        }
+
+        input, textarea {
+            background: var(--card);
+            border: 1px solid var(--border);
+            color: var(--white);
+            padding: 14px 16px;
+            font-size: 0.9em;
+            font-family: 'Inter', sans-serif;
+            width: 100%;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        input:focus, textarea:focus { border-color: var(--gold); }
+
+        textarea { resize: vertical; min-height: 120px; }
+
+        .submit-btn {
+            padding: 16px 40px;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            font-weight: 700;
+            font-size: 0.85em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+            align-self: flex-start;
+        }
+
+        .submit-btn:hover { background: var(--gold-light); }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-name {
+            font-family: 'Lilita One', cursive;
+            font-size: 1.1em;
+            color: var(--gold);
+        }
+
+        .footer-copy {
+            font-size: 0.75em;
+            color: rgba(60,30,15,0.35);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(60,30,15,0.45);
+            text-decoration: none;
+            font-size: 0.8em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { display: none; }
+            .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+            .shows-grid { grid-template-columns: 1fr; }
+            .reels-grid { grid-template-columns: 1fr; }
+            .social-grid { grid-template-columns: 1fr; }
+            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .hero-cta { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">Troy Caylak</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#reels">Reels</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#social">Follow</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <p class="hero-eyebrow">Actor, Los Angeles</p>
+        <h1 class="hero-name">
+            <span class="first">TROY</span>
+            <span class="last">CAYLAK</span>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">HBO. Netflix. FX. NBC. CBS. ABC. Peacock. Paramount+. He's worked with Bill Hader, Chris Evans, Kiefer Sutherland, and Chris Meloni. Yes, that Chris Evans. Take a moment.</p>
+        <div class="hero-cta">
+            <a href="#reels" class="btn-primary">Watch Reels</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- BIO -->
+    <div class="full-divider"></div>
+    <div id="about" class="section bio-section">
+        <p class="section-label">The Person</p>
+        <h2 class="section-title">About Troy</h2>
+        <div class="bio-grid">
+            <div class="bio-text">
+                <p>Troy Caylak is an actor based in Los Angeles who has somehow ended up in scenes with Bill Hader, Chris Evans, Kiefer Sutherland, Chris Meloni, Mandy Moore, Christina Applegate, Craig Robinson, and Lil Dicky. None of them asked him to leave. That's the resume.</p>
+                <p>He does drama. He does comedy. He does that specific thing where you can't tell which one it is but it's working and nobody wants to stop it. Casting directors have a word for this. Troy just calls it Tuesday.</p>
+                <p>HBO twice. Netflix. FX. NBC. CBS. ABC. Peacock twice. Paramount+. Amazon. If there's a network or streamer that hasn't called yet, it's only a matter of time. He's patient. He's got credits to spare.</p>
+            </div>
+            <div class="bio-stats">
+                <div class="stat-item">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">Major Network Credits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">8+</div>
+                    <div class="stat-label">Networks & Streamers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">LA</div>
+                    <div class="stat-label">Based In Los Angeles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REELS -->
+    <div class="full-divider"></div>
+    <div id="reels" class="section reels-section">
+        <p class="section-label">The Proof</p>
+        <h2 class="section-title">Reels</h2>
+        <div class="reels-grid">
+            <div class="reel-card">
+                <video class="reel-video" controls poster="">
+                    <source src="dramatic-reel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="reel-info">
+                    <div class="reel-type">Dramatic</div>
+                    <div class="reel-title">Drama Reel</div>
+                    <p class="reel-desc">Serious faces. Intense moments. The kind of acting that makes people say "wait, who is that guy?" This is that guy.</p>
+                </div>
+            </div>
+            <div class="reel-card">
+                <video class="reel-video" controls poster="">
+                    <source src="comedic-reel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="reel-info">
+                    <div class="reel-type">Comedic</div>
+                    <div class="reel-title">Comedy Reel</div>
+                    <p class="reel-desc">Funny faces. Funnier moments. The kind of acting that makes people pause their TV and rewind. He's been known to cause rewinding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOWS -->
+    <div class="full-divider"></div>
+    <div id="work" class="section shows-section">
+        <p class="section-label">The Resume</p>
+        <h2 class="section-title">Credits</h2>
+        <div class="shows-grid">
+
+            <!-- Barry, HBO -->
+            <div class="show-card">
+                <div class="show-number">01</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/1200px-HBO_logo.svg.png" alt="HBO" class="network-logo logo-hbo">
+                </div>
+                <div class="show-title">Barry</div>
+                <img src="stills/barry.png" alt="Barry" class="show-still">
+                <p class="show-desc">Bill Hader plays a hitman who wants to be an actor. Troy plays someone in his orbit. The irony was mutual. The tension was real. Bill Hader said nothing. Troy also said nothing. It was a very quiet, very excellent scene.</p>
+                <span class="show-tag">HBO Drama</span>
+            </div>
+
+            <!-- Dave, FX -->
+            <div class="show-card">
+                <div class="show-number">03</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA2MCI+CiAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjYwIiByeD0iNCIgZmlsbD0iIzAwMCIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTglIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIzNiIgZmlsbD0iI2ZmZiI+Rlg8L3RleHQ+Cjwvc3ZnPg==" alt="FX" class="network-logo logo-fx">
+                </div>
+                <div class="show-title">Dave</div>
+                <img src="stills/dave.png" alt="Dave" class="show-still">
+                <p class="show-desc">Lil Dicky made a show about himself becoming a famous rapper. Troy was in it. Lil Dicky did not object. The two of them in the same scene is either a great idea or a social experiment. Both, probably.</p>
+                <span class="show-tag">FX Comedy</span>
+            </div>
+
+            <!-- Dead to Me, Netflix -->
+            <div class="show-card">
+                <div class="show-number">04</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png" alt="Netflix" class="network-logo logo-netflix">
+                </div>
+                <div class="show-title">Dead to Me</div>
+                <img src="stills/dead-to-me.png" alt="Dead to Me" class="show-still">
+                <p class="show-desc">Christina Applegate and Mandy Moore in a dark comedy about grief, bad decisions, and women who are done explaining themselves. Troy was there. He didn't overstay his welcome. That's called reading the room.</p>
+                <span class="show-tag">Netflix Comedy-Drama</span>
+            </div>
+
+            <!-- Killing It, Peacock -->
+            <div class="show-card">
+                <div class="show-number">05</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgNjAiPgogIDxjaXJjbGUgY3g9IjE4IiBjeT0iMzAiIHI9IjgiIGZpbGw9IiNFODE3NEIiLz4KICA8Y2lyY2xlIGN4PSIzOCIgY3k9IjE0IiByPSI4IiBmaWxsPSIjRjQ3QjIwIi8+CiAgPGNpcmNsZSBjeD0iNjIiIGN5PSI4IiByPSI4IiBmaWxsPSIjRkFEMDAwIi8+CiAgPGNpcmNsZSBjeD0iODYiIGN5PSIxNCIgcj0iOCIgZmlsbD0iIzAwQTY1MCIvPgogIDxjaXJjbGUgY3g9IjEwMiIgY3k9IjMwIiByPSI4IiBmaWxsPSIjMDA3MkNFIi8+CiAgPGNpcmNsZSBjeD0iODgiIGN5PSI0OCIgcj0iOCIgZmlsbD0iIzhCMkZDOSIvPgogIDx0ZXh0IHg9IjEyMCIgeT0iMzgiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjI2IiBmaWxsPSIjMTExIj5wZWFjb2NrPC90ZXh0Pgo8L3N2Zz4=" alt="Peacock" class="network-logo logo-peacock">
+                </div>
+                <div class="show-title">Killing It</div>
+                <img src="stills/killing-it.png" alt="Killing It" class="show-still">
+                <p class="show-desc">Craig Robinson hunts giant pythons for prize money. This is a real show that exists and Troy was on it. He survived. Craig Robinson survived. The pythons were not available for comment.</p>
+                <span class="show-tag">Peacock Comedy</span>
+            </div>
+
+            <!-- The Offer, Paramount+ -->
+            <div class="show-card">
+                <div class="show-number">06</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgNjAiPgogIDxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iNjAiIHJ4PSI2IiBmaWxsPSIjMDA2NEZGIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1OCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjIyIiBmaWxsPSIjZmZmIj5QQVJBTU9VTlQrPC90ZXh0Pgo8L3N2Zz4=" alt="Paramount+" class="network-logo logo-paramount">
+                </div>
+                <div class="show-title">The Offer</div>
+                <img src="stills/the-offer.png" alt="The Offer" class="show-still">
+                <p class="show-desc">The making of The Godfather. Kiefer Sutherland producing cinematic history. Troy was in it, which means he is technically adjacent to The Godfather. He will bring this up at dinner.</p>
+                <span class="show-tag">Paramount+ Limited Series</span>
+            </div>
+
+            <!-- Law & Order SVU, NBC -->
+            <div class="show-card">
+                <div class="show-number">07</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/1200px-NBC_logo.svg.png" alt="NBC" class="network-logo logo-nbc">
+                </div>
+                <div class="show-title">Law & Order: SVU</div>
+                <img src="stills/law-and-order-svu.png" alt="Law & Order: SVU" class="show-still">
+                <p class="show-desc">Chris Meloni has been interrogating people on this show since before most of his guests were born. Troy appeared. Twice. NBC brought him back. Chris Meloni's face remained intense. Business as usual.</p>
+                <span class="show-tag">NBC Drama</span>
+            </div>
+
+            <!-- FBI, CBS -->
+            <div class="show-card">
+                <div class="show-number">08</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/1200px-CBS_logo.svg.png" alt="CBS" class="network-logo logo-cbs">
+                </div>
+                <div class="show-title">FBI</div>
+                <img src="stills/fbi.png" alt="FBI" class="show-still">
+                <p class="show-desc">The FBI needed Troy. Specifically for this episode. He can neither confirm nor deny what happened. That's just good acting. Or possibly actual federal protocol.</p>
+                <span class="show-tag">CBS Drama</span>
+            </div>
+
+            <!-- Bosch, Amazon -->
+            <div class="show-card">
+                <div class="show-number">09</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNjAiPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iNjAiIHJ4PSI2IiBmaWxsPSIjMDBBOEUwIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI0MiUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIj5hbWF6b248L3RleHQ+CiAgPHRleHQgeD0iNTAlIiB5PSI3MiUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIj5wcmltZSB2aWRlbzwvdGV4dD4KPC9zdmc+" alt="Amazon Prime Video" class="network-logo logo-amazon">
+                </div>
+                <div class="show-title">Bosch</div>
+                <img src="stills/bosch.png" alt="Bosch" class="show-still">
+                <p class="show-desc">LA crime. Moral ambiguity. Titus Welliver looking tired but determined. Troy was there, adding to the moral ambiguity. Everyone was very serious. It was great.</p>
+                <span class="show-tag">Amazon Prime Drama</span>
+            </div>
+
+            <!-- NCIS, CBS -->
+            <div class="show-card">
+                <div class="show-number">10</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/1200px-CBS_logo.svg.png" alt="CBS" class="network-logo logo-cbs">
+                </div>
+                <div class="show-title">NCIS: LA</div>
+                <img src="stills/ncis-la.png" alt="NCIS: LA" class="show-still">
+                <p class="show-desc">The Los Angeles division of America's most unstoppable franchise. Troy was on it. He looked great in the California sun. Everyone moved on. He did not.</p>
+                <span class="show-tag">CBS Drama</span>
+            </div>
+
+            <!-- Agents of S.H.I.E.L.D., ABC -->
+            <div class="show-card">
+                <div class="show-number">11</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCI+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9IiMwMDAiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjU4JSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjYiIGZpbGw9IiNmZmYiPmFiYzwvdGV4dD4KPC9zdmc+" alt="ABC" class="network-logo logo-abc">
+                </div>
+                <div class="show-title">Agents of S.H.I.E.L.D.</div>
+                <img src="stills/agents-of-shield.png" alt="Agents of S.H.I.E.L.D." class="show-still">
+                <p class="show-desc">Marvel. ABC. Superheroes and shadowy government organizations. Troy appeared in the Marvel universe and, somehow, remained grounded. It's a gift. Few have it.</p>
+                <span class="show-tag">ABC / Marvel</span>
+            </div>
+
+            <!-- Lincoln Lawyer, Netflix -->
+            <div class="show-card">
+                <div class="show-number">12</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png" alt="Netflix" class="network-logo logo-netflix">
+                </div>
+                <div class="show-title">The Lincoln Lawyer</div>
+                <img src="stills/lincoln-lawyer.png" alt="The Lincoln Lawyer" class="show-still">
+                <p class="show-desc">Manuel Garcia-Rulfo runs a law practice out of a Lincoln. Troy was in it. He did not practice law. He just brought the drama. The Lincoln appreciated it.</p>
+                <span class="show-tag">Netflix Drama</span>
+            </div>
+
+            <!-- Designated Survivor, Netflix/ABC -->
+            <div class="show-card">
+                <div class="show-number">13</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png" alt="Netflix" class="network-logo logo-netflix">
+                </div>
+                <div class="show-title">Designated Survivor</div>
+                <img src="stills/designated-survivor.png" alt="Designated Survivor" class="show-still">
+                <p class="show-desc">Kiefer Sutherland becomes president by accident. Troy was in it. He did not become president. That's not how it works. But he was there for the chaos and that counts.</p>
+                <span class="show-tag">Netflix/ABC Drama</span>
+            </div>
+
+            <!-- The Chosen, Angel Studios -->
+            <div class="show-card">
+                <div class="show-number">14</div>
+                <div class="network-logo-wrap">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgNjAiPgogIDxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iNjAiIHJ4PSI2IiBmaWxsPSIjMUExQTJFIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1OCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjZmZmIj5BTkdFTCBTVFVESU9TPC90ZXh0Pgo8L3N2Zz4=" alt="Angel Studios" class="network-logo">
+                </div>
+                <div class="show-title">The Chosen</div>
+                <img src="stills/the-chosen.png" alt="The Chosen" class="show-still">
+                <p class="show-desc">The highest-crowd-funded media project in history. A show watched by hundreds of millions. Troy was in it. He is historically significant now and cannot be talked out of this belief.</p>
+                <span class="show-tag">Angel Studios Drama</span>
+            </div>
+
+            <!-- Seal Team, CBS/Paramount+ -->
+            <div class="show-card">
+                <div class="show-number">15</div>
+                <div class="network-logo-wrap">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/1200px-CBS_logo.svg.png" alt="CBS" class="network-logo logo-cbs">
+                </div>
+                <div class="show-title">SEAL Team</div>
+                <img src="stills/seal-team.png" alt="SEAL Team" class="show-still">
+                <p class="show-desc">David Boreanaz leads an elite military unit through impossible missions. Troy was there. He survived. The mission was classified. His performance was not.</p>
+                <span class="show-tag">CBS / Paramount+ Drama</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="full-divider"></div>
+    <div id="social" class="section social-section">
+        <p class="section-label">Find Troy Online</p>
+        <h2 class="section-title">Follow Along</h2>
+        <div class="social-grid">
+            <a href="https://www.youtube.com/@TroyCaylak" target="_blank" class="social-card">
+                <div class="social-platform">YouTube</div>
+                <div class="social-handle">@TroyCaylak</div>
+                <p class="social-desc">Videos. Content. Things Troy made and decided the world should see. Subscribe or don't. He'll be fine. Probably.</p>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587268632044" target="_blank" class="social-card">
+                <div class="social-platform">Facebook</div>
+                <div class="social-handle">Troy Caylak</div>
+                <p class="social-desc">The fan page. For fans. If you're a fan, this is the place. If you're not a fan yet, visit and reassess your life choices.</p>
+            </a>
+            <a href="https://instagram.com/TroyCaylak" target="_blank" class="social-card">
+                <div class="social-platform">Instagram</div>
+                <div class="social-handle">@TroyCaylak</div>
+                <p class="social-desc">Photos. Moments. Behind the scenes things that aren't actually that behind the scenes. But it's curated. He's an actor.</p>
+            </a>
+            <a href="https://x.com/TroyCaylak" target="_blank" class="social-card">
+                <div class="social-platform">X / Twitter</div>
+                <div class="social-handle">@TroyCaylak</div>
+                <p class="social-desc">Thoughts. Observations. Things he probably should have kept to himself but didn't. That's the platform. That's the energy.</p>
+            </a>
+            <a href="https://tiktok.com/@TroyCaylak" target="_blank" class="social-card">
+                <div class="social-platform">TikTok</div>
+                <div class="social-handle">@TroyCaylak</div>
+                <p class="social-desc">Short videos for a generation with a short attention span. Troy adapted. Thriving. The algorithm respects him and he respects it back.</p>
+            </a>
+            <a href="https://www.imdb.com/name/nm1017746/" target="_blank" class="social-card">
+                <div class="social-platform">IMDb</div>
+                <div class="social-handle">Turhan Troy Caylak</div>
+                <p class="social-desc">The official record. Every credit. Every role. Every time he showed up on a set and made it better. It's all documented. The internet does not forget.</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="full-divider"></div>
+    <div id="contact" class="section contact-section">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's Talk</h2>
+        <div class="contact-inner">
+            <div class="contact-copy">
+                <p>Casting directors, producers, collaborators, and people who just want to say what's up. All of you are welcome here. Troy responds. Eventually. He's working on it.</p>
+                <div class="contact-links">
+                    <a href="https://x.com/TroyCaylak" target="_blank" class="contact-link">Twitter / X, @TroyCaylak</a>
+                    <a href="https://www.imdb.com/name/nm1017746/" target="_blank" class="contact-link">IMDb, Turhan Troy Caylak</a>
+                    <a href="https://instagram.com/TroyCaylak" target="_blank" class="contact-link">Instagram, @TroyCaylak</a>
+                    <a href="https://www.youtube.com/@TroyCaylak" target="_blank" class="contact-link">YouTube, @TroyCaylak</a>
+                    <a href="https://www.facebook.com/profile.php?id=61587268632044" target="_blank" class="contact-link">Facebook Fan Page</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/myzjqdge" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Who are you?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Where should Troy reply?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Say something. He's listening." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send It</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-name">TROY CAYLAK</div>
+            <div class="footer-copy">© 2026 Troy Caylak. All rights reserved. Yes, even that part.</div>
+            <div class="footer-links">
+                <a href="https://x.com/TroyCaylak" target="_blank">X</a>
+                <a href="https://instagram.com/TroyCaylak" target="_blank">IG</a>
+                <a href="https://www.youtube.com/@TroyCaylak" target="_blank">YT</a>
+                <a href="https://www.facebook.com/profile.php?id=61587268632044" target="_blank">FB</a>
+                <a href="https://www.imdb.com/name/nm1017746/" target="_blank">IMDb</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
