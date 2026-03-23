@@ -413,6 +413,7 @@
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
+            object-position: top;
             display: block;
             margin-bottom: 20px;
             border: 1px solid rgba(255,255,255,0.08);
@@ -722,7 +723,7 @@
         <div class="reels-grid">
             <div class="reel-card">
                 <video class="reel-video" controls poster="">
-                    <source src="dramatic-reel.mp4" type="video/mp4">
+                    <source src="dramatic-reel-web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="reel-info">
@@ -733,7 +734,7 @@
             </div>
             <div class="reel-card">
                 <video class="reel-video" controls poster="">
-                    <source src="comedic-reel.mp4" type="video/mp4">
+                    <source src="comedic-reel-web.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="reel-info">
@@ -763,19 +764,6 @@
                 <p class="show-desc">Bill Hader plays a hitman who wants to be an actor. Troy plays someone in his orbit. The irony was mutual. The tension was real. Bill Hader said nothing. Troy also said nothing. It was a very quiet, very excellent scene.</p>
                 <span class="show-tag">HBO Drama</span>
             </div>
-
-            <!-- Dave, FX -->
-            <div class="show-card">
-                <div class="show-number">03</div>
-                <div class="network-logo-wrap">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA2MCI+CiAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjYwIiByeD0iNCIgZmlsbD0iIzAwMCIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTglIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIzNiIgZmlsbD0iI2ZmZiI+Rlg8L3RleHQ+Cjwvc3ZnPg==" alt="FX" class="network-logo logo-fx">
-                </div>
-                <div class="show-title">Dave</div>
-                <img src="stills/dave.png" alt="Dave" class="show-still">
-                <p class="show-desc">Lil Dicky made a show about himself becoming a famous rapper. Troy was in it. Lil Dicky did not object. The two of them in the same scene is either a great idea or a social experiment. Both, probably.</p>
-                <span class="show-tag">FX Comedy</span>
-            </div>
-
             <!-- Dead to Me, Netflix -->
             <div class="show-card">
                 <div class="show-number">04</div>
@@ -836,18 +824,6 @@
                 <span class="show-tag">CBS Drama</span>
             </div>
 
-            <!-- Bosch, Amazon -->
-            <div class="show-card">
-                <div class="show-number">09</div>
-                <div class="network-logo-wrap">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNjAiPgogIDxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iNjAiIHJ4PSI2IiBmaWxsPSIjMDBBOEUwIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI0MiUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIj5hbWF6b248L3RleHQ+CiAgPHRleHQgeD0iNTAlIiB5PSI3MiUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIj5wcmltZSB2aWRlbzwvdGV4dD4KPC9zdmc+" alt="Amazon Prime Video" class="network-logo logo-amazon">
-                </div>
-                <div class="show-title">Bosch</div>
-                <img src="stills/bosch.png" alt="Bosch" class="show-still">
-                <p class="show-desc">LA crime. Moral ambiguity. Titus Welliver looking tired but determined. Troy was there, adding to the moral ambiguity. Everyone was very serious. It was great.</p>
-                <span class="show-tag">Amazon Prime Drama</span>
-            </div>
-
             <!-- NCIS, CBS -->
             <div class="show-card">
                 <div class="show-number">10</div>
@@ -859,19 +835,6 @@
                 <p class="show-desc">The Los Angeles division of America's most unstoppable franchise. Troy was on it. He looked great in the California sun. Everyone moved on. He did not.</p>
                 <span class="show-tag">CBS Drama</span>
             </div>
-
-            <!-- Agents of S.H.I.E.L.D., ABC -->
-            <div class="show-card">
-                <div class="show-number">11</div>
-                <div class="network-logo-wrap">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCI+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzgiIGZpbGw9IiMwMDAiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjU4JSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjYiIGZpbGw9IiNmZmYiPmFiYzwvdGV4dD4KPC9zdmc+" alt="ABC" class="network-logo logo-abc">
-                </div>
-                <div class="show-title">Agents of S.H.I.E.L.D.</div>
-                <img src="stills/agents-of-shield.png" alt="Agents of S.H.I.E.L.D." class="show-still">
-                <p class="show-desc">Marvel. ABC. Superheroes and shadowy government organizations. Troy appeared in the Marvel universe and, somehow, remained grounded. It's a gift. Few have it.</p>
-                <span class="show-tag">ABC / Marvel</span>
-            </div>
-
             <!-- Lincoln Lawyer, Netflix -->
             <div class="show-card">
                 <div class="show-number">12</div>
@@ -895,19 +858,6 @@
                 <p class="show-desc">Kiefer Sutherland becomes president by accident. Troy was in it. He did not become president. That's not how it works. But he was there for the chaos and that counts.</p>
                 <span class="show-tag">Netflix/ABC Drama</span>
             </div>
-
-            <!-- The Chosen, Angel Studios -->
-            <div class="show-card">
-                <div class="show-number">14</div>
-                <div class="network-logo-wrap">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgNjAiPgogIDxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iNjAiIHJ4PSI2IiBmaWxsPSIjMUExQTJFIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1OCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjE4IiBmaWxsPSIjZmZmIj5BTkdFTCBTVFVESU9TPC90ZXh0Pgo8L3N2Zz4=" alt="Angel Studios" class="network-logo">
-                </div>
-                <div class="show-title">The Chosen</div>
-                <img src="stills/the-chosen.png" alt="The Chosen" class="show-still">
-                <p class="show-desc">The highest-crowd-funded media project in history. A show watched by hundreds of millions. Troy was in it. He is historically significant now and cannot be talked out of this belief.</p>
-                <span class="show-tag">Angel Studios Drama</span>
-            </div>
-
             <!-- Seal Team, CBS/Paramount+ -->
             <div class="show-card">
                 <div class="show-number">15</div>
@@ -957,7 +907,7 @@
             <a href="https://www.imdb.com/name/nm1017746/" target="_blank" class="social-card">
                 <div class="social-platform">IMDb</div>
                 <div class="social-handle">Turhan Troy Caylak</div>
-                <p class="social-desc">The official record. Every credit. Every role. Every time he showed up on a set and made it better. It's all documented. The internet does not forget.</p>
+                <p class="social-desc">Follow him. He's funny. We promise.</p>
             </a>
         </div>
     </div>
