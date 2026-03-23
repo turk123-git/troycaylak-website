@@ -426,18 +426,24 @@
 
         .show-title {
             position: absolute;
-            top: 60px;
-            left: 16px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-family: 'Lilita One', cursive;
-            font-size: 1.2em;
+            font-size: 1.6em;
+            font-weight: bold;
             color: #fff;
             z-index: 3;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            opacity: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            max-width: 90%;
         }
 
         .show-card:hover .show-title {
             opacity: 1;
+            font-size: 1.8em;
         }
 
         .show-desc {
