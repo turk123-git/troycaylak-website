@@ -366,102 +366,121 @@
         }
 
         .show-card {
-            background: var(--card);
-            padding: 32px 28px;
-            border: 1px solid var(--border);
+            background: #000;
             position: relative;
             overflow: hidden;
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .show-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--gold);
-            transform: scaleX(0);
-            transition: transform 0.3s;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         .show-card:hover {
-            border-color: rgba(201,168,76,0.4);
-            transform: translateY(-2px);
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
         }
 
-        .show-card:hover::before {
-            transform: scaleX(1);
+        .show-still {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            filter: brightness(0.9) contrast(1.05);
+            transition: filter 0.3s ease, brightness 0.3s ease;
         }
 
+        .show-card:hover .show-still {
+            filter: brightness(0.5) contrast(1.1);
+        }
 
-
+        /* Netflix-style overlay */
         .network-logo-wrap {
+            position: absolute;
+            top: 16px;
+            left: 16px;
             height: 36px;
             display: flex;
             align-items: center;
-            margin-bottom: 16px;
+            z-index: 3;
         }
 
         .network-logo {
-            max-height: 32px;
-            max-width: 100px;
+            max-height: 28px;
+            max-width: 90px;
             object-fit: contain;
-            filter: brightness(0);
-            opacity: 0.85;
+            filter: brightness(0) invert(1);
+            opacity: 0.95;
         }
 
-        .logo-netflix { filter: none; opacity: 1; max-height: 22px; }
-        .logo-hbo { max-height: 28px; }
-        .logo-fx { max-height: 30px; }
-        .logo-peacock { max-height: 28px; filter: none; opacity: 1; }
-        .logo-paramount { max-height: 30px; }
-        .logo-abc { max-height: 36px; }
-        .logo-nbc { max-height: 36px; }
-        .logo-cbs { max-height: 28px; }
-        .logo-amazon { max-height: 28px; }
+        .logo-netflix { filter: none; opacity: 1; max-height: 20px; }
+        .logo-hbo { max-height: 24px; filter: brightness(0) invert(1); }
+        .logo-fx { max-height: 28px; filter: brightness(0) invert(1); }
+        .logo-peacock { max-height: 26px; filter: none; opacity: 1; }
+        .logo-paramount { max-height: 28px; filter: none; opacity: 1; }
+        .logo-abc { max-height: 32px; filter: brightness(0) invert(1); }
+        .logo-nbc { max-height: 32px; filter: brightness(0) invert(1); }
+        .logo-cbs { max-height: 24px; filter: brightness(0) invert(1); }
+        .logo-amazon { max-height: 24px; filter: brightness(0) invert(1); }
 
         .show-title {
+            position: absolute;
+            top: 60px;
+            left: 16px;
             font-family: 'Lilita One', cursive;
-            font-size: 1.15em;
-            margin-bottom: 10px;
-            letter-spacing: 0.02em;
-            color: #2C1810;
+            font-size: 1.2em;
+            color: #fff;
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .show-card:hover .show-title {
+            opacity: 1;
         }
 
         .show-desc {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
             font-size: 0.85em;
-            line-height: 1.7;
-            color: #2C1810;
-            margin-bottom: 16px;
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.95));
+            opacity: 0;
+            transition: opacity 0.3s ease 0.1s;
+            z-index: 2;
+            max-height: 60%;
+            overflow: hidden;
+        }
+
+        .show-card:hover .show-desc {
+            opacity: 1;
         }
 
         .show-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border: 1px solid rgba(201,168,76,0.3);
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            padding: 6px 14px;
+            border: 1px solid var(--gold);
             color: var(--gold);
             font-size: 0.65em;
             font-weight: 600;
             letter-spacing: 0.15em;
             text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.15s;
+            z-index: 3;
+            background: rgba(0,0,0,0.6);
+            border-radius: 4px;
         }
 
-        .show-still {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-            object-position: top;
-            display: block;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.08);
-            filter: brightness(0.92) contrast(1.05);
-            transition: filter 0.3s;
-        }
-
-        .show-card:hover .show-still {
-            filter: brightness(1) contrast(1.05);
+        .show-card:hover .show-tag {
+            opacity: 1;
         }
 
         /* HEADSHOTS GALLERY */
