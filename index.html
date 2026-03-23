@@ -24,7 +24,7 @@
             --gold-light: #E8845A;
             --red: #C4622D;
             --accent: #C4622D;
-            --bg: #F5F0E8;
+            --bg: #E8DFD3;
             --bg-section: #EDE4D4;
             --text: #2C1810;
             --text-muted: #7A5C44;
@@ -148,6 +148,49 @@
             margin-top: 48px;
             flex-wrap: wrap;
             justify-content: center;
+        }
+
+        .hero-with-headshots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-headshot {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .hero-center {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .hero-with-headshots {
+                gap: 24px;
+            }
+            .hero-headshot {
+                width: 140px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-with-headshots {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .hero-headshot {
+                width: 160px;
+                height: 200px;
+            }
         }
 
         .btn-primary {
@@ -675,15 +718,21 @@
     <!-- HERO -->
     <section class="hero">
         <p class="hero-eyebrow">Actor, Los Angeles</p>
-        <h1 class="hero-name">
-            <span class="first">TROY</span>
-            <span class="last">CAYLAK</span>
-        </h1>
-        <div class="hero-divider"></div>
-        <p class="hero-tagline">HBO. Netflix. FX. NBC. CBS. ABC. Peacock. Paramount+. He's worked with Bill Hader, Chris Evans, Kiefer Sutherland, and Chris Meloni. Yes, that Chris Evans. Take a moment.</p>
-        <div class="hero-cta">
-            <a href="#reels" class="btn-primary">Watch Reels</a>
-            <a href="#contact" class="btn-secondary">Get In Touch</a>
+        <div class="hero-with-headshots">
+            <img src="Troy Bohemian Laugh.jpg" alt="Troy Bohemian Laugh" class="hero-headshot">
+            <div class="hero-center">
+                <h1 class="hero-name">
+                    <span class="first">TROY</span>
+                    <span class="last">CAYLAK</span>
+                </h1>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">HBO. Netflix. FX. NBC. CBS. ABC. Peacock. Paramount+. He's worked with Bill Hader, Chris Evans, Kiefer Sutherland, and Chris Meloni. Yes, that Chris Evans. Take a moment.</p>
+                <div class="hero-cta">
+                    <a href="#reels" class="btn-primary">Watch Reels</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <img src="Troy Bohemian Guy.jpg" alt="Troy Bohemian Guy" class="hero-headshot">
         </div>
     </section>
 
@@ -882,32 +931,26 @@
             <a href="https://www.youtube.com/@TroyCaylak" target="_blank" class="social-card">
                 <div class="social-platform">YouTube</div>
                 <div class="social-handle">@TroyCaylak</div>
-                <p class="social-desc">Videos. Content. Things Troy made and decided the world should see. Subscribe or don't. He'll be fine. Probably.</p>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61587268632044" target="_blank" class="social-card">
                 <div class="social-platform">Facebook</div>
                 <div class="social-handle">Troy Caylak</div>
-                <p class="social-desc">The fan page. For fans. If you're a fan, this is the place. If you're not a fan yet, visit and reassess your life choices.</p>
             </a>
             <a href="https://instagram.com/TroyCaylak" target="_blank" class="social-card">
                 <div class="social-platform">Instagram</div>
                 <div class="social-handle">@TroyCaylak</div>
-                <p class="social-desc">Photos. Moments. Behind the scenes things that aren't actually that behind the scenes. But it's curated. He's an actor.</p>
             </a>
             <a href="https://x.com/TroyCaylak" target="_blank" class="social-card">
                 <div class="social-platform">X / Twitter</div>
                 <div class="social-handle">@TroyCaylak</div>
-                <p class="social-desc">Thoughts. Observations. Things he probably should have kept to himself but didn't. That's the platform. That's the energy.</p>
             </a>
             <a href="https://tiktok.com/@TroyCaylak" target="_blank" class="social-card">
                 <div class="social-platform">TikTok</div>
                 <div class="social-handle">@TroyCaylak</div>
-                <p class="social-desc">Short videos for a generation with a short attention span. Troy adapted. Thriving. The algorithm respects him and he respects it back.</p>
             </a>
             <a href="https://www.imdb.com/name/nm1017746/" target="_blank" class="social-card">
                 <div class="social-platform">IMDb</div>
                 <div class="social-handle">Turhan Troy Caylak</div>
-                <p class="social-desc">Follow him. He's funny. We promise.</p>
             </a>
         </div>
     </div>
