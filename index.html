@@ -426,24 +426,28 @@
 
         .show-title {
             position: absolute;
-            top: 50%;
+            top: 8px;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             font-family: 'Lilita One', cursive;
-            font-size: 1.6em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #fff;
             z-index: 3;
             opacity: 1;
             transition: all 0.3s ease;
             text-align: center;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
             max-width: 90%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 4px 8px;
+            border-radius: 4px;
         }
 
         .show-card:hover .show-title {
             opacity: 1;
-            font-size: 1.8em;
+            font-size: 1.4em;
+            background: rgba(0, 0, 0, 0.7);
         }
 
         .show-desc {
