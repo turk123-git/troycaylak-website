@@ -614,6 +614,68 @@
             line-height: 1.5;
         }
 
+        /* REPRESENTATION */
+        .representation-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+        }
+
+        .rep-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .rep-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .rep-card:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--gold);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .rep-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .rep-card p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .rep-link {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .rep-link:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .rep-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .rep-card {
+                padding: 30px;
+            }
+        }
+
         /* CONTACT */
         .contact-section { border-top: 1px solid var(--border); }
 
@@ -758,6 +820,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#reels">Reels</a></li>
             <li><a href="#work">Work</a></li>
+            <li><a href="#representation">Representation</a></li>
             <li><a href="#social">Follow</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -990,6 +1053,23 @@
                 <div class="social-platform">IMDb</div>
                 <div class="social-handle">Turhan Troy Caylak</div>
             </a>
+        </div>
+    </div>
+
+    <!-- REPRESENTATION -->
+    <div class="full-divider"></div>
+    <div id="representation" class="section representation-section">
+        <h2>Representation</h2>
+        <div class="rep-container">
+            <div class="rep-card">
+                <h3>AMT Artists, Inc.</h3>
+                <p>15260 Ventura Blvd., Ste. 1200<br>Sherman Oaks, CA 91403</p>
+                <p><strong>Phone:</strong> (818) 582-2490</p>
+            </div>
+            <div class="rep-card">
+                <h3>Entertainment Lab</h3>
+                <p><a href="https://www.entlab.la/" target="_blank" class="rep-link">www.entlab.la</a></p>
+            </div>
         </div>
     </div>
 
