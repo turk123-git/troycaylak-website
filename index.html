@@ -426,17 +426,17 @@
 
         .show-title {
             position: absolute;
-            bottom: 60px;
-            left: 8px;
+            top: 8px;
+            right: 8px;
             transform: none;
             font-family: 'Lilita One', cursive;
-            font-size: 1em;
+            font-size: 0.95em;
             font-weight: bold;
             color: #fff;
             z-index: 3;
             opacity: 1;
             transition: all 0.3s ease;
-            text-align: left;
+            text-align: right;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
             max-width: 85%;
             background: rgba(0, 0, 0, 0.6);
@@ -452,7 +452,7 @@
 
         .show-desc {
             position: absolute;
-            bottom: 0;
+            bottom: 50px;
             left: 0;
             right: 0;
             padding: 16px;
@@ -463,7 +463,7 @@
             opacity: 0;
             transition: opacity 0.3s ease 0.1s;
             z-index: 2;
-            max-height: 70%;
+            max-height: 50%;
             overflow-y: auto;
             overflow-x: hidden;
         }
@@ -491,6 +491,22 @@
         }
 
         .show-card:hover .show-tag {
+            opacity: 1;
+        }
+
+        .show-logo {
+            position: absolute;
+            bottom: 80px;
+            right: 16px;
+            height: 50px;
+            max-width: 80px;
+            opacity: 0.85;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+            z-index: 2;
+            transition: opacity 0.3s ease;
+        }
+
+        .show-card:hover .show-logo {
             opacity: 1;
         }
 
@@ -835,6 +851,9 @@
                 </div>
                 <div class="show-title">Barry</div>
                 <img src="stills/barry.png" alt="Barry" class="show-still">
+                <svg class="show-logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="45" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#000" letter-spacing="2">BARRY</text>
+                </svg>
                 <p class="show-desc">Bill Hader plays a hitman who wants to be an actor. Troy plays someone in his orbit. The irony was mutual. The tension was real. Bill Hader said nothing. Troy also said nothing. It was a very quiet, very excellent scene.</p>
                 <span class="show-tag">HBO Drama</span>
             </div>
@@ -845,6 +864,9 @@
                 </div>
                 <div class="show-title">Dead to Me</div>
                 <img src="stills/dead-to-me.png" alt="Dead to Me" class="show-still">
+                <svg class="show-logo" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="70" y="45" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="24" font-weight="900" fill="#ff1493" letter-spacing="1">DEAD TO ME</text>
+                </svg>
                 <p class="show-desc">Christina Applegate and Mandy Moore in a dark comedy about grief, bad decisions, and women who are done explaining themselves. Troy was there. He didn't overstay his welcome. That's called reading the room.</p>
                 <span class="show-tag">Netflix Comedy-Drama</span>
             </div>
@@ -856,6 +878,9 @@
                 </div>
                 <div class="show-title">Killing It</div>
                 <img src="stills/killing-it.png" alt="Killing It" class="show-still">
+                <svg class="show-logo" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="70" y="45" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#22C55E" letter-spacing="2">KILLING IT</text>
+                </svg>
                 <p class="show-desc">Craig Robinson hunts giant pythons for prize money. This is a real show that exists and Troy was on it. He survived. Craig Robinson survived. The pythons were not available for comment.</p>
                 <span class="show-tag">Peacock Comedy</span>
             </div>
@@ -867,6 +892,9 @@
                 </div>
                 <div class="show-title">The Offer</div>
                 <img src="stills/the-offer.png" alt="The Offer" class="show-still">
+                <svg class="show-logo" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="70" y="45" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="900" fill="#FFD700" letter-spacing="1">THE OFFER</text>
+                </svg>
                 <p class="show-desc">The making of The Godfather. Miles Teller producing cinematic history. Troy was in it, which means he is technically adjacent to The Godfather. He will bring this up at dinner.</p>
                 <span class="show-tag">Paramount+ Limited Series</span>
             </div>
@@ -878,6 +906,9 @@
                 </div>
                 <div class="show-title">Law & Order: SVU</div>
                 <img src="stills/law-and-order-svu.png" alt="Law & Order: SVU" class="show-still">
+                <svg class="show-logo" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+                    <text x="70" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#1E40AF" letter-spacing="0.5">LAW &amp; ORDER</text>
+                </svg>
                 <p class="show-desc">Chris Meloni has been interrogating people on this show since before most of his guests were born. Troy appeared. Twice. NBC brought him back. Chris Meloni's face remained intense. Business as usual.</p>
                 <span class="show-tag">NBC Drama</span>
             </div>
